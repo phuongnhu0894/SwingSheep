@@ -28,7 +28,7 @@
 - (void) drawJungle {
     UIImageView* background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"jungle.jpg"]];
     background.frame = self.view.bounds;
-    background.contentMode = UIViewContentModeScaleAspectFit;
+    background.contentMode = UIViewContentModeScaleAspectFill; //kich thuoc phu hop voi man hinh
     [self.view addSubview:background];
 }
 
