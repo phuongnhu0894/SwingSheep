@@ -23,11 +23,11 @@
 
 - (void) drawNestedSquares {
     CGSize mainViewSize = self.view.bounds.size;
-    CGFloat margin = 20;
+    CGFloat margin = 5;
     CGFloat recWidth = mainViewSize.width - margin*2.0;
     CGFloat statusNavigatoinBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height;
     CGPoint center = CGPointMake(mainViewSize.width*0.5, (mainViewSize.height+ statusNavigatoinBarHeight)*0.5);
-    for (int i = 0; i<100; i++) {
+    for (int i = 0; i<20; i++) {
         UIView* square;
         if (i % 2 == 0){
             square = [self drawSquareByWidth:recWidth andRotate:false atCenter:center];
@@ -35,7 +35,7 @@
             square = [self drawSquareByWidth:recWidth andRotate:true atCenter:center];
         }
         [self.view addSubview:square];
-        recWidth = recWidth* 0.9;//0.707
+        recWidth = recWidth* 0.707;
     }
     
 }
@@ -44,7 +44,7 @@
                       atCenter: (CGPoint) center {
     UIView *square = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, width)];
     square.center = center;
-    square.backgroundColor = rotate ? [UIColor whiteColor] : [UIColor blackColor];
+    square.backgroundColor = rotate ? [UIColor whiteColor] : [UIColor purpleColor];
     square.transform = rotate ? CGAffineTransformMakeRotation(-M_SQRT1_2) : CGAffineTransformIdentity;
     return square;
 }

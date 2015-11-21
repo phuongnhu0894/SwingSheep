@@ -25,6 +25,7 @@
     [self drawSheepAndSea];
     [self animateSheep];
     [self animateSea];
+    [self playSong];
 }
 
 - (void) drawSheepAndSea {
@@ -66,31 +67,6 @@
     CGRect leftFrame = CGRectMake(-self.view.bounds.size.width, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     CGRect centerFrame = self.view.bounds;
     CGRect rightFrame = CGRectMake(self.view.bounds.size.width, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-//    [UIView animateKeyframesWithDuration:8 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
-//        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:2 animations:^{
-//            sea1.frame = leftFrame;
-//            sea2.frame = centerFrame;
-//        }];
-//        sea1.frame = rightFrame;
-//        [UIView addKeyframeWithRelativeStartTime:2 relativeDuration:2 animations:^{
-//            sea2.frame = leftFrame;
-//            sea3.frame = centerFrame;
-//        }];
-//        sea2.frame = rightFrame;
-//        [UIView addKeyframeWithRelativeStartTime:4 relativeDuration:2 animations:^{
-//            sea3.frame = leftFrame;
-//            sea4.frame = centerFrame;
-//        }];
-//        sea3.frame = rightFrame;
-//        [UIView addKeyframeWithRelativeStartTime:6 relativeDuration:2 animations:^{
-//            sea4.frame = leftFrame;
-//            sea1.frame = centerFrame;
-//        }];
-//        sea4.frame = rightFrame;
-//    } completion:^(BOOL finished) {
-//        [self animateSea];
-//    }];
-
     
     [UIView animateWithDuration:5
                      animations:^{
@@ -120,20 +96,44 @@
                          }];
                     }];
                           
-    
+    //    [UIView animateKeyframesWithDuration:8 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+    //        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:2 animations:^{
+    //            sea1.frame = leftFrame;
+    //            sea2.frame = centerFrame;
+    //        }];
+    //        sea1.frame = rightFrame;
+    //        [UIView addKeyframeWithRelativeStartTime:2 relativeDuration:2 animations:^{
+    //            sea2.frame = leftFrame;
+    //            sea3.frame = centerFrame;
+    //        }];
+    //        sea2.frame = rightFrame;
+    //        [UIView addKeyframeWithRelativeStartTime:4 relativeDuration:2 animations:^{
+    //            sea3.frame = leftFrame;
+    //            sea4.frame = centerFrame;
+    //        }];
+    //        sea3.frame = rightFrame;
+    //        [UIView addKeyframeWithRelativeStartTime:6 relativeDuration:2 animations:^{
+    //            sea4.frame = leftFrame;
+    //            sea1.frame = centerFrame;
+    //        }];
+    //        sea4.frame = rightFrame;
+    //    } completion:^(BOOL finished) {
+    //        [self animateSea];
+    //    }];
+
 }
 
-//- (void) playSong {
-//    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"sharazan" ofType:@"mp3"];
-//    NSURL *url = [NSURL fileURLWithPath:filePath];
-//    NSError *error;
-//    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url
-//                                                         error:&error];
-//    [audioPlayer prepareToPlay];
-//    [audioPlayer play];
-//}
-//- (void) viewWillDisappear:(BOOL)animated {
-//    [audioPlayer stop];
-//}
+- (void) playSong {
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"shaun" ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url
+                                                         error:&error];
+    [audioPlayer prepareToPlay];
+    [audioPlayer play];
+}
+- (void) viewWillDisappear:(BOOL)animated {
+    [audioPlayer stop];
+}
 
 @end
