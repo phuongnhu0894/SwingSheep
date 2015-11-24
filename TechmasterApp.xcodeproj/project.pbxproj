@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F7FCF0E1C000D360019660F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7FCF0D1C000D360019660F /* AVFoundation.framework */; };
-		3F7FCF101C000DF30019660F /* shaun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F7FCF0F1C000DF30019660F /* shaun.mp3 */; settings = {ASSET_TAGS = (); }; };
+		3F87855B1C040589008EB5F4 /* shaun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F87855A1C040589008EB5F4 /* shaun.mp3 */; settings = {ASSET_TAGS = (); }; };
 		3F994BEA1BFD6D1D006294BE /* CampFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F994BE91BFD6D1D006294BE /* CampFire.m */; };
 		3F994C591BFD7827006294BE /* NestedSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F994C581BFD7827006294BE /* NestedSquare.m */; };
 		3F994C5C1BFD82F4006294BE /* FlyingBird.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F994C5B1BFD82F4006294BE /* FlyingBird.m */; };
@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		3F7FCF0D1C000D360019660F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		3F7FCF0F1C000DF30019660F /* shaun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = shaun.mp3; path = ../../Desktop/shaun.mp3; sourceTree = "<group>"; };
+		3F87855A1C040589008EB5F4 /* shaun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shaun.mp3; sourceTree = "<group>"; };
 		3F994BE81BFD6D1D006294BE /* CampFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampFire.h; sourceTree = "<group>"; };
 		3F994BE91BFD6D1D006294BE /* CampFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampFire.m; sourceTree = "<group>"; };
 		3F994C571BFD7827006294BE /* NestedSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedSquare.h; sourceTree = "<group>"; };
@@ -137,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8785591C040589008EB5F4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3F87855A1C040589008EB5F4 /* shaun.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		64F6A2B01BFF6E9100A8F320 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +215,7 @@
 			children = (
 				E24EF54F19BC5149007D17C7 /* AppDelegate.h */,
 				E24EF55019BC5149007D17C7 /* AppDelegate.m */,
+				3F8785591C040589008EB5F4 /* Sounds */,
 				64F6A2B01BFF6E9100A8F320 /* Images */,
 				E24EF56F19BC5178007D17C7 /* MainScreen */,
 				E24EF57619BC61D3007D17C7 /* DetailScreens */,
@@ -230,7 +239,6 @@
 		E24EF56F19BC5178007D17C7 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3F7FCF0F1C000DF30019660F /* shaun.mp3 */,
 				E24EF57319BC51DE007D17C7 /* BootLogic.h */,
 				E24EF57419BC51DE007D17C7 /* BootLogic.m */,
 				E24EF57019BC51A6007D17C7 /* MainScreen.h */,
@@ -340,7 +348,7 @@
 				64F6A2E81BFF6E9100A8F320 /* sea3.jpg in Resources */,
 				64F6A2E61BFF6E9100A8F320 /* sea1.jpg in Resources */,
 				64F6A2D41BFF6E9100A8F320 /* campFire1.gif in Resources */,
-				3F7FCF101C000DF30019660F /* shaun.mp3 in Resources */,
+				3F87855B1C040589008EB5F4 /* shaun.mp3 in Resources */,
 				64F6A2E31BFF6E9100A8F320 /* campFire8.gif in Resources */,
 				64F6A2E11BFF6E9100A8F320 /* campFire6.gif in Resources */,
 				64F6A2D51BFF6E9100A8F320 /* campFire10.gif in Resources */,
